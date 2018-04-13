@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 
+// import components
+import SideBar from '../../components/SideBar/SideBar'
+
 // dummy data
 import content from '../../content.json';
 
@@ -47,14 +50,14 @@ class Landing extends Component {
 
     render() {
         return (
-            <div className='Container Landing'>
-                <h1>BLISS TEXTURE</h1>
-                <h2>Jordan Hetzer</h2>
-                <h3>Bliss Texture</h3>
-                <h4>Humble Beginings</h4>
-                <h5>Textures By</h5>
-                <h6>PAINT YOUR OWN</h6>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, numquam!</p>
+            <div>
+                <SideBar styles={{ backgroundColor: `rgba(18, 3, 36 ,${this.state.opacity})` }}/>
+                <div style={{backgroundColor:'green', height:'900px'}}>
+                    <div className='TestRot'>
+                    <h6>Helojkhsdfksjhfkjhfdskjhsfksjhf</h6>
+
+                    </div>
+                </div>
             </div>
         )
     }
