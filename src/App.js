@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
-import Home from './home/Home';
+// import Home from './home/Home';
+import './styles/main.css';
+import Landing from './views/Landing/Landing';
+// import Test from './views/Tests/Fonts';
 import {Switch, Route} from 'react-router';
 
 class App extends Component {
@@ -8,7 +11,7 @@ class App extends Component {
             <div className="App">
                 <div className="app-container">
                     <Switch>
-                        <Route exact path="/" component={Home} />
+                        <Route exact path="/" component={Landing} />
                     </Switch>
                 </div>
             </div>
