@@ -74,29 +74,42 @@ h6 {
 
 .SideBar {
   position: fixed;
-  height: 100vh; }
+  left: -200px;
+  height: 100vh;
+  width: 250px;
+  display: grid;
+  grid-template-columns: 200px 50px;
+  background: brown; }
 
-.SideBar .grid {
+.SideBar .info {
+  display: grid;
+  grid-template-columns: 1fr; }
+
+.SideBar .info .menu img {
+  height: 40px;
+  width: 40px; }
+
+.SideBar .info .title .rotator {
+  height: 0px;
+  width: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #1352ff 2px solid; }
+
+.SideBar .info .title .rotator h6 {
+  width: 200px;
+  transform: rotateZ(-90deg); }
+
+.SideBar .menuLinks {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  justify-items: center;
-  align-content: center; }
+  grid-auto-rows: 40px; }
 
-.SideBar div {
-  border: turquoise 3px solid; }
+.SideBar .menuLinks div {
+  border: sienna 2px solid; }
 
-.box1 {
-  width: 60px;
-  height: 60px;
-  background-color: red; }
-
-.box2 {
-  width: 60px;
-  height: 60px;
-  background-color: green; }
-
-.box3 {
-  width: 60px;
-  height: 60px;
-  background-color: yellow; }
+.center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }

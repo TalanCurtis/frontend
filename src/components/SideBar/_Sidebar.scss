@@ -1,29 +1,59 @@
-.SideBar{
+.SideBar {
     position: fixed;
+    left: -200px;
     height: 100vh;
-    .grid{
+    width: 250px;
+    // padding: Bad for grid
+    display: grid;
+    grid-template-columns: 200px 50px;
+    background: brown;
+
+    .info{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        justify-items: center;
-        align-content: center;
+        // justify-items: center;
+        div{
+            // border: sienna 2px solid;
+        }
+        .menu{
+            img{
+                height: 40px;
+                width: 40px;
+            }
+        }
+        .title{
+            //// TODO Work on rotating text and displaying correctly
+            // transform: rotateZ(-90deg);
+            // width: 50px;
+            // height: 200px;
+            // display: flex;
+            .rotator{
+                // height: 50px;
+                height: 0px;
+                width: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // transform: rotateZ(-90deg);
+                // transform-origin: 50% 50%;
+                border: rgb(19, 82, 255) 2px solid;
+                h6{
+                    width: 200px;
+                    // height: 200px;
+                    // width: 200px;
+                    transform: rotateZ(-90deg);
+                }
+            }
+        }
     }
-    div{
-        border: turquoise 3px solid;
+
+    .menuLinks{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 40px;
+        div{
+            border: sienna 2px solid;
+        }
     }
-}
-.box1{
-    width: 60px;
-    height: 60px;
-    background-color: red;
-}
-.box2{
-    width: 60px;
-    height: 60px;
-    background-color: green;
-}
-.box3{
-    width: 60px;
-    height: 60px;
-    background-color: yellow;
+
 }

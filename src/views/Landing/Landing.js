@@ -10,7 +10,7 @@ class Landing extends Component {
     constructor() {
         super();
         this.state = {
-            opacity: 1,
+            scrollPercent: 1,
             footer: {},
             intro: {},
             sliderPictures: {},
@@ -45,18 +45,16 @@ class Landing extends Component {
         // window.innerHeight)).toFixed(2) * 1 then subtract from 1 being 100% opaque
         let scrollPercent = (1 - (window.scrollY / (document.body.offsetHeight - window.innerHeight))).toFixed(2) * 1
         // console.log('Scroll', scrollPercent)
-        this.setState({opacity: scrollPercent})
+        this.setState({scrollPercent: scrollPercent})
     }
 
     render() {
         return (
             <div>
-                <SideBar styles={{ backgroundColor: `rgba(18, 3, 36 ,${this.state.opacity})` }}/>
-                <div style={{backgroundColor:'green', height:'900px'}}>
-                    <div className='TestRot'>
-                    <h6>Helojkhsdfksjhfkjhfdskjhsfksjhf</h6>
-
-                    </div>
+                {/* passing down scroll percent to handle fade of scroll position. Maybe I can put this on the sidebar?*/}
+                <SideBar navText={this.state.intro.navText} scrollPercent={this.state.scrollPercent}/>
+                <div className='center' style={{backgroundColor:'green', height:'900px'}}>
+                <button onClick={()=>console.log(this.state)}>state</button>                
                 </div>
             </div>
         )
