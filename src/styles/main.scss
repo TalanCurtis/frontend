@@ -5,6 +5,9 @@
 // Components
 @import '../components/SideBar/Sidebar';
 @import '../components/Intro/Intro';
+@import '../components/Slider/Slider';
+@import '../components/Carousel/Carousel';
+@import '../components/CarouselCard/CarouselCard';
 
 // Views
-@import '../views/Landing/_Landing.scss'
+@import '../views/Landing/_Landing.scss';
