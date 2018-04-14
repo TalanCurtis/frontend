@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 // import components
 import SideBar from '../../components/SideBar/SideBar'
+import Intro from '../../components/Intro/Intro'
 
 // dummy data
 import content from '../../content.json';
@@ -53,9 +54,10 @@ class Landing extends Component {
             <div>
                 {/* passing down scroll percent to handle fade of scroll position. Maybe I can put this on the sidebar?*/}
                 <SideBar navText={this.state.intro.navText} scrollPercent={this.state.scrollPercent}/>
-                <div className='center' style={{backgroundColor:'green', height:'900px'}}>
+                <Intro content={this.state.intro}/>
+                {/* <div className='center' style={{backgroundColor:'green', height:'900px'}}>
                 <button onClick={()=>console.log(this.state)}>state</button>                
-                </div>
+                </div> */}
             </div>
         )
     }

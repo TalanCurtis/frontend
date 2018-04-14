@@ -44,9 +44,15 @@ class SideBar extends Component {
             }}>
                 {/* hidden menu links displayed when menu roles out */}
                 <div className='menuLinks'>
-                        <Link to='/'><h5>Home</h5></Link>
-                        <Link to='/'><h5>About</h5></Link>
-                        <Link to='/'><h5>Contact</h5></Link>
+                    <Link to='/'>
+                        <h5>Home</h5>
+                    </Link>
+                    <Link to='/'>
+                        <h5>About</h5>
+                    </Link>
+                    <Link to='/'>
+                        <h5>Contact</h5>
+                    </Link>
                     <button onClick={() => console.log(this.props)}>Props</button>
                 </div>
 
@@ -69,6 +75,5 @@ class SideBar extends Component {
     }
 
 }
-// test
 
 export default SideBar
