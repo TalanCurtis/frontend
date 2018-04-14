@@ -31,10 +31,8 @@
             .date{
                 grid-column: 3;
                 grid-row: 3;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                align-items: flex-end;
+                align-self: center;
+                justify-self: flex-end;
                 padding: 10px;
             }
         }

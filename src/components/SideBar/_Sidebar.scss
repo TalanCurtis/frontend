@@ -16,6 +16,7 @@
             // border: sienna 2px solid;
         }
         .menu{
+            justify-self: center;
             img{
                 height: 40px;
                 width: 40px;
@@ -33,15 +34,17 @@
                 width: 0px;
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                // align-items: center;
                 // transform: rotateZ(-90deg);
                 // transform-origin: 50% 50%;
-                border: rgb(19, 82, 255) 2px solid;
+                // border: rgb(19, 82, 255) 2px solid;
                 h6{
                     width: 200px;
                     // height: 200px;
-                    // width: 200px;
+                    width: 200px;
                     transform: rotateZ(-90deg);
+                    // transform-origin: 200px
+                    
                 }
             }
         }
