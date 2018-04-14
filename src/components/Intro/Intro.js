@@ -5,26 +5,25 @@ import testImgLogo from '../../images/assets/logo.png'
 function Intro(props) {
     return (
         <div className='Intro'>
-            <button onClick={() => console.log(props)}>THISI IS SIS SI</button>
-
             {props.content.navText
-                ? <div className='contain'>
-                        <img className='bgImage' src={testImgBG} alt="" style={{width:'100vw'}}/>
-                        <img className='logo' src={testImgLogo} alt="" style={{width:'25vw'}}/>
-                        <div className='text'>
-                        {/* Left off Here fix problem!!! when i add text it breaks my grid. Why? */}
-                        {/* {props.content.header[0].description.name}
-                        {props.content.header[0].description.text} */}
-                            {/* <h4>{props.content.header[0].description.name}</h4>
-                            <p>{props.content.header[0].description.text}</p> */}
-                        </div>
-                        <div className='date'>
+                ? <div className='grid'>
+                        <img className='bgImage' src={testImgBG} alt=""/>
+                        <div className='subGrid'>
+                            <img className='logo' src={testImgLogo} alt=""/>
+                            <div className='text'> 
+                                <h4>{props.content.header[0].title}</h4>
+                                <p>{props.content.header[0].description.name}</p> 
+                            </div>
+                            <div className='date'>
+                                {/* TODO : change from Hard coded date because none was provided in the content. If this is the current date 
+                                i would do a with moment-js*/}
+                                <p>April 19th 2016</p>
+                            </div>
 
                         </div>
                     </div>
                 : null
 }
-
         </div>
     )
 }
