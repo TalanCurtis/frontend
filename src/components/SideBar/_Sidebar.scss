@@ -51,8 +51,10 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-auto-rows: 40px;
-        div{
-            border: sienna 2px solid;
+        // justify-items: center;
+        align-items: center;
+        h5{
+            margin-left: 20px;
         }
     }
 
