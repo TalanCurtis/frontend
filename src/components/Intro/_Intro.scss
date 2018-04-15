@@ -1,8 +1,6 @@
 .Intro {
-    width: 100vw;
-    background-color: green;
+    width: 100%;
     .grid {
-        background-color: purple;
         display: grid;
         grid-template-columns: 50px 1fr;
         .bgImage{

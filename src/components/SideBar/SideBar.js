@@ -53,21 +53,12 @@ class SideBar extends Component {
                     <Link to='/'>
                         <h5>Contact</h5>
                     </Link>
-                    <button onClick={() => console.log(this.props)}>Props</button>
                 </div>
 
                 {/* Tip of the menu displaying the info and menu activate button */}
                 <div className='info'>
                     <div className='menu'>
                         <img src={menu_icon} onClick={() => this.handleMenuTransition()} alt=""/>
-                    </div>
-                    <div className='title'>
-                        <div className='rotator'>
-                            <h6 >{this.props.navText}</h6>
-                        </div>
-                    </div>
-                    <div className='date'>
-                        {/* <p>This is date</p> */}
                     </div>
                 </div>
             </div>
