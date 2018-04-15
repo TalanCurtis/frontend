@@ -19,14 +19,17 @@ class Carousel extends Component {
     handleSlideBack() {
         console.log('slideBack')
         if(this.state.slideCount <= 1){
+            // If you are at the begginng of the slides and hit back.
+            // it gets the number of slides -1 then multiplies that by how far to move to take you to the last slide.
             this.setState({
                 slideCount: this.state.slides.length,
-                left: (this.state.slides.length-1) * -310
+                left: (this.state.slides.length-1) * -270
             })
         }else{
+            // the amount to move is the width of the CarouselCard image plus padding.
             this.setState({
                 slideCount: this.state.slideCount - 1,
-                left: this.state.left + 310
+                left: this.state.left + 270
             })
         }
     }
@@ -40,9 +43,8 @@ class Carousel extends Component {
         }else{
             this.setState({
                 slideCount: this.state.slideCount + 1,
-                left: this.state.left - 310
+                left: this.state.left - 270
             })
-
         }
     }
 

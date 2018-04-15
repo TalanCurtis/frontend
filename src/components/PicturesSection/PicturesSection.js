@@ -13,9 +13,9 @@ function PicturesSection(props) {
                         <Carousel/>
                     </div>
                     <div className='paragraphsGrid'>
-                        <p className='rotate'>january 2016</p>
-                        <p>{props.content.para1}</p>
-                        <p>{props.content.para2}</p>
+                        {/* <p className='rotate'>january 2016</p> */}
+                        <p className='para1'>{props.content.para1}</p>
+                        <p className='para2'>{props.content.para2}</p>
                     </div>
                 </div>
 }
