@@ -1,0 +1,29 @@
+.PicturesSection{
+    background-color: green;
+    .grid {
+        background-color: brown;
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        height: 100%;
+        overflow: hidden;
+        .Carousel{
+            grid-column: 2;
+        }
+    }
+    .paragraphsGrid{
+        display: grid;
+        grid-template-columns: 50px repeat(2, 1fr);
+        grid-template-rows: minmax(100px, 1fr);
+        p{
+            padding:10px;
+        }
+        .rotate{
+            align-self: center;
+            width: 100%;
+            transform: rotateZ(-90deg);
+        }
+    }
+}
