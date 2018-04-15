@@ -55,16 +55,16 @@ class Carousel extends Component {
 
         return (
             <div className='Carousel'>
-                <div>
-                    <button onClick={() => this.handleSlideBack()}>Left</button>
-                    <button onClick={() => this.handleSlideForeword()}>Right</button>
-                </div>
+                <header>
+                    <div className='leftCheveron' onClick={() => this.handleSlideBack()}/>
+                    <div className='rightCheveron' onClick={() => this.handleSlideForeword()}/>
+                    <h5>{this.props.content.navText.toUpperCase()}</h5>
+                </header>
                 <div className='slideContainer'  style={{...styles, left: this.state.left}}>
                     {slides}
                 </div>
             </div>
         )
-
     }
 }
 

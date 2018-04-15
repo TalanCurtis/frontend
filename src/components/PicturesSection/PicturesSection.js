@@ -10,7 +10,7 @@ function PicturesSection(props) {
                 : <div>
 
                     <div className='grid'>
-                        <Carousel/>
+                        <Carousel content={props.content}/>
                     </div>
                     <div className='paragraphsGrid'>
                         {/* <p className='rotate'>january 2016</p> */}

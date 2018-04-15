@@ -6,6 +6,26 @@
     overflow: hidden;
     white-space: nowrap;
 
+    header{
+        display: flex;
+        padding:5px;
+        align-items: center;
+        // Used sprite sheet to have unique hover effect on cheveron image.
+        .rightCheveron, .leftCheveron{
+            margin-right: 6px;
+            width: 32px;
+            height: 32px;
+            background: url('../images/assets/cheveron.png') top left no-repeat;
+            background-size: 64px 32px;
+        }
+        .rightCheveron:hover, .leftCheveron:hover{
+            background-position-x: -32px;
+        }
+        .rightCheveron{
+            transform: scaleX(-1)
+        }
+    }
+
     .slideContainer{
         position: relative;
         left: 0px;
