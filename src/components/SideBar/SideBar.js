@@ -13,15 +13,37 @@ class SideBar extends Component {
         this.state = {
             isOpen: false,
             menuPosition: -200,
-            bgAlpha: 1
+            bgAlpha: 1,
+            scrollPercent: 1,
         }
+        this.handleScroll = this
+        .handleScroll
+        .bind(this)
+    }
+
+    componentDidMount(){
+        // add event listener for scrolling
+        window.addEventListener('scroll', this.handleScroll);
+    }
+    componentWillUnmount() {
+        // remove the event lister for scolling
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll() {
+        // offsetHeight  - inner height = max scroll distance then divide it by current
+        // scrollY let scrollPercent = (window.scrollY / (document.body.offsetHeight -
+        // window.innerHeight)).toFixed(2) * 1 then subtract from 1 being 100% opaque
+        let scrollPercent = (1 - (window.scrollY / (document.body.offsetHeight - window.innerHeight))).toFixed(2) * 1
+        // console.log('Scroll', scrollPercent)
+        this.setState({scrollPercent: scrollPercent})
     }
 
     handleMenuTransition() {
         console.log('handle menu Transition', this.state)
         if (this.state.isOpen) {
             // set these values when menu closes
-            this.setState({menuPosition: -200, bgAlpha: this.props.scrollPercent})
+            this.setState({menuPosition: -200, bgAlpha: this.state.scrollPercent})
         } else {
             // set these values when menu is opens
             this.setState({menuPosition: 0, bgAlpha: 1})
@@ -40,7 +62,7 @@ class SideBar extends Component {
                 left: this.state.menuPosition,
                 backgroundColor: `rgba(18, 3, 36 ,${this.state.isOpen
                     ? this.state.bgAlpha
-                    : this.props.scrollPercent})`
+                    : this.state.scrollPercent})`
             }}>
                 {/* hidden menu links displayed when menu roles out */}
                 <div className='menuLinks'>
