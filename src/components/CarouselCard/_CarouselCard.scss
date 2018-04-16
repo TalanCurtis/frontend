@@ -1,7 +1,67 @@
-.CarouselCard{
-    background: purple;
+.CarouselCard {
     margin: 5px;
-    display: inline-block;
-    height: 150px;
+    height: 340px;
     width: 260px;
+
+    .mainImage {
+        // downside about clipping the edge using linear gradient instead of boarder radius, box shodow does not recognize the alpha.
+        background: linear-gradient(45deg, transparent 15px, blue 0) bottom left;
+        width: 100%;
+        height: 150px;
+        .likes{
+            display: flex;
+            position: relative;
+            left: 75%;
+            top: 75%;
+            .heartImg{
+                height: 15px;
+                width: 15px;
+                margin-right: 5px;
+            }
+        }
+    }
+    .info {
+        background: linear-gradient(135deg, transparent 15px, white 0) bottom left;
+        width: 260px;
+        height: 140px;
+        padding: 30px;
+        h5{
+            color: $textDark;
+        }
+        div{
+            width: 100%;
+            height: 100%;
+            overflow-wrap: break-word;
+            p{
+                color: $textMid;
+            }
+        }
+    }
+    footer {
+        display: flex;
+        justify-content: space-between;
+        border: rgba(0, 0, 0, 0.164) 2px solid;
+        background-color: white;
+        .footerInfo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border-right: rgba(0, 0, 0, 0.164) 2px solid;
+            padding-left: 4px;
+            padding-right: 10px;
+            p{
+                color: $textDark;
+            }
+            .commentImg {
+                margin-right: 5px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .trippleDotImg {
+            border-left: rgba(0, 0, 0, 0.164) 2px solid;
+            width: 40px;
+            height: 40px;
+        }
+    }
 }
