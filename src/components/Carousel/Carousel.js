@@ -60,7 +60,6 @@ class Carousel extends Component {
 
         return (
             <div className='Carousel'>
-                <button onClick={() => console.log(this.props.content)}>Test</button>
                 <header>
                     <div className='leftCheveron' onClick={() => this.handleSlideBack()}/>
                     <div className='rightCheveron' onClick={() => this.handleSlideForeword()}/>

@@ -30,7 +30,6 @@ class Landing extends Component {
     }
 
     render() {
-        console.log('veriewwei')
         return (
             <div>
                 {/* passing down scroll percent to handle fade of scroll position. Maybe I can put this on the sidebar?*/}
