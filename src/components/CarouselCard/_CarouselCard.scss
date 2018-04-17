@@ -1,17 +1,9 @@
 .CarouselCard {
-    margin: 5px;
+    margin-left: 12px;
     height: 340px;
     width: 260px;
 
     .mainImage {
-        // downside about clipping the edge using linear gradient instead of boarder radius, box shodow does not recognize the alpha.
-        // background: linear-gradient(45deg, rgb(214, 54, 214) 15px, blue 0) bottom left;
-        // background-image: url('../images/assets/image1.jpg');
-        // background: linear-gradient(45deg, transparent 15px, url('../images/assets/image1.jpg')) bottom left;
-        // overflow: hidden;
-        // background-image: url("../images/assets/image1.jpg"); /* fallback if gradient doesn't work*/
-        // background-image: linear-gradient(45deg, black 15px, transparent 0), url("../images/assets/image1.jpg");
-
         width: 100%;
         height: 150px;
         .likes{

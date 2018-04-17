@@ -1,37 +1,70 @@
 .Intro {
-    width: 100%;
-    .grid {
-        display: grid;
-        grid-template-columns: 50px 1fr;
-        .bgImage{
+    .baseGrid {
+        .bgImage {
             grid-column: 2;
             grid-row: 1;
             width: 100%;
         }
-        .subGrid{
+        // Sub grid is based off the bg image size for easy manipulation of content.
+        .subGrid {
             display: grid;
-            grid-template-columns: repeat(3,  1fr);
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
             grid-column: 2;
             grid-row: 1;
-            height: 100%;
-            .text{
+            .text {
                 grid-column: 1/3;
-                grid-row: 3;
+                grid-row: 2;
                 padding-left: 20px;
                 align-self: center;
             }
-            .logo{
-                grid-column: 2;
-                grid-row: 2;
-                width: 100%;
+            .logo {
+                grid-column: 1/4;
+                grid-row: 1;
+                width: 50%;
+                align-self: center;
+                justify-self: center;
+                margin-top: 10px;
             }
-            .date{
+            .date {
                 grid-column: 3;
-                grid-row: 3;
+                grid-row: 2;
                 align-self: center;
                 justify-self: flex-end;
-                padding: 0px 25px;
+                padding: 25px 10px;
+            }
+        }
+    }
+}
+
+@media (min-width: 426px) {
+    .Intro {
+        .baseGrid {
+            .bgImage {
+                grid-column: 2;
+                grid-row: 1;
+                width: 100%;
+            }
+            .subGrid {
+                grid-template-rows: repeat(3, 1fr);
+                .logo {
+                    grid-column: 2;
+                    grid-row: 2;
+                    width: 100%;
+                }
+                .text {
+                    grid-column: 1/3;
+                    grid-row: 3;
+                    padding-left: 20px;
+                    align-self: center;
+                }
+                .date {
+                    grid-column: 3;
+                    grid-row: 3;
+                    align-self: center;
+                    justify-self: flex-end;
+                    padding: 0px 25px;
+                }
             }
         }
     }

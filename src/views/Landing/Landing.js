@@ -33,7 +33,6 @@ class Landing extends Component {
         return (
             <div className='Landing'>
                 <SideBar navText={this.state.intro.navText}/>
-                <div className='sideBarFiller'></div>
                 <Intro content={this.state.intro}/>
                 <Carousel content={this.state.sliderPictures} />
                 <Carousel content={this.state.sliderArticles} />

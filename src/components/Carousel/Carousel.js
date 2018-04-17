@@ -26,13 +26,13 @@ class Carousel extends Component {
             // slide.
             this.setState({
                 slideCount: this.props.content.slides.length,
-                left: (this.props.content.slides.length - 1) * -270
+                left: (this.props.content.slides.length - 1) * -272
             })
         } else {
             // the amount to move is the width of the CarouselCard image plus padding.
             this.setState({
                 slideCount: this.state.slideCount - 1,
-                left: this.state.left + 270
+                left: this.state.left + 272
             })
         }
     }
@@ -43,7 +43,7 @@ class Carousel extends Component {
         } else {
             this.setState({
                 slideCount: this.state.slideCount + 1,
-                left: this.state.left - 270
+                left: this.state.left - 272
             })
         }
     }
@@ -55,7 +55,7 @@ class Carousel extends Component {
             })
 
         return (
-            <div className='mainGrid'>
+            <div className='baseGrid'>
                 {_.isEmpty(this.props.content)?
                 null:
                 <div className='Carousel'>

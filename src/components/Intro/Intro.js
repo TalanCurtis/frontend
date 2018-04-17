@@ -8,7 +8,7 @@ function Intro(props) {
         <div className='Intro'>
             {_.isEmpty(props.content)
                 ? null
-                : <div className='grid'>
+                : <div className='baseGrid'>
                     <img className='bgImage' src={testImgBG} alt=""/>
                     <div className='subGrid'>
                         <img className='logo' src={testImgLogo} alt=""/>
@@ -21,7 +21,6 @@ function Intro(props) {
                                 i would do a with moment-js*/}
                             <p>April 19th 2016</p>
                         </div>
-
                     </div>
                 </div>
 }
