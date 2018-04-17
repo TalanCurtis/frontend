@@ -2,10 +2,11 @@ import React, {Component} from 'react';
 import _ from 'lodash';
 
 // import components
-import SideBar from '../../components/SideBar/SideBar'
-import Intro from '../../components/Intro/Intro'
+import SideBar from '../../components/SideBar/SideBar';
+import Intro from '../../components/Intro/Intro';
 import Carousel from '../../components/Carousel/Carousel';
 import Signature from '../../components/Signature/Signature';
+import Footer from '../../components/Footer/Footer';
 
 // dummy data
 import content from '../../content.json';
@@ -53,6 +54,7 @@ class Landing extends Component {
                     {articalColumns}
                 </div>
                 <Signature content={this.state.signature}/>
+                <Footer content={this.state.footer}/>
             </div>
         )
     }
