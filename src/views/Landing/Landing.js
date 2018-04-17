@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 // import components
 import SideBar from '../../components/SideBar/SideBar'
 import Intro from '../../components/Intro/Intro'
-import PicturesSection from '../../components/PicturesSection/PicturesSection'
+import Carousel from '../../components/Carousel/Carousel';
 
 // dummy data
 import content from '../../content.json';
@@ -31,11 +31,12 @@ class Landing extends Component {
 
     render() {
         return (
-            <div>
-                {/* passing down scroll percent to handle fade of scroll position. Maybe I can put this on the sidebar?*/}
+            <div className='Landing'>
                 <SideBar navText={this.state.intro.navText}/>
+                <div className='sideBarFiller'></div>
                 <Intro content={this.state.intro}/>
-                <PicturesSection content={this.state.sliderPictures}/>
+                <Carousel content={this.state.sliderPictures} />
+                <Carousel content={this.state.sliderArticles} />
             </div>
         )
     }

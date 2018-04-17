@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import CarouselCard from '../CarouselCard/CarouselCard';
+import _ from 'lodash';
 
 // transition styles.
 const styles = {
@@ -16,9 +17,6 @@ class Carousel extends Component {
         }
     }
 
-    componentDidMount() {
-        this.setState({slides: this.props.content.slides})
-    }
 
     handleSlideBack() {
         console.log('slideBack')
@@ -27,8 +25,8 @@ class Carousel extends Component {
             // slides -1 then multiplies that by how far to move to take you to the last
             // slide.
             this.setState({
-                slideCount: this.state.slides.length,
-                left: (this.state.slides.length - 1) * -270
+                slideCount: this.props.content.slides.length,
+                left: (this.props.content.slides.length - 1) * -270
             })
         } else {
             // the amount to move is the width of the CarouselCard image plus padding.
@@ -40,7 +38,7 @@ class Carousel extends Component {
     }
 
     handleSlideForeword() {
-        if (this.state.slideCount >= this.state.slides.length) {
+        if (this.state.slideCount >= this.props.content.slides.length) {
             this.setState({slideCount: 1, left: 0})
         } else {
             this.setState({
@@ -51,32 +49,35 @@ class Carousel extends Component {
     }
 
     render() {
-        const slides = this
-            .state
-            .slides
-            .map((x, i) => {
+        const slides = _.isEmpty(this.props.content)? null: 
+        this.props.content.slides.map((x, i) => {
                 return (<CarouselCard key={i} content={x}/>)
             })
 
         return (
-            <div className='Carousel'>
-                <header>
-                    <div className='leftCheveron' onClick={() => this.handleSlideBack()}/>
-                    <div className='rightCheveron' onClick={() => this.handleSlideForeword()}/>
-                    <h5>{this
-                            .props
-                            .content
-                            .navText
-                            .toUpperCase()}</h5>
-                </header>
-                <div
-                    className='slideContainer'
-                    style={{
-                    ...styles,
-                    left: this.state.left
-                }}>
-                    {slides}
+            <div className='mainGrid'>
+                {_.isEmpty(this.props.content)?
+                null:
+                <div className='Carousel'>
+                    <header>
+                        <div className='leftCheveron' onClick={() => this.handleSlideBack()}/>
+                        <div className='rightCheveron' onClick={() => this.handleSlideForeword()}/>
+                        <h5>{this
+                                .props
+                                .content
+                                .navText
+                                .toUpperCase()}</h5>
+                    </header>
+                    <div
+                        className='slideContainer'
+                        style={{
+                        ...styles,
+                        left: this.state.left
+                    }}>
+                        {slides}
+                    </div>
                 </div>
+                }
             </div>
         )
     }
