@@ -5,6 +5,7 @@ import _ from 'lodash';
 import SideBar from '../../components/SideBar/SideBar'
 import Intro from '../../components/Intro/Intro'
 import Carousel from '../../components/Carousel/Carousel';
+import Signature from '../../components/Signature/Signature';
 
 // dummy data
 import content from '../../content.json';
@@ -51,6 +52,7 @@ class Landing extends Component {
                     <div className='blank'></div>
                     {articalColumns}
                 </div>
+                <Signature content={this.state.signature}/>
             </div>
         )
     }
