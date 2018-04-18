@@ -23,6 +23,8 @@ class Details extends Component {
     }
 
     componentDidMount() {
+        // set window scoll position to top.
+        window.scrollTo(0, 0); 
         // Here I deconstructed content and assigned it to state using set Timeout to
         // mimic a Ajax request to a server.
         const {footer, signature, slider1, slider2} = content
@@ -54,7 +56,6 @@ class Details extends Component {
     render() {
         return (
             <div className='Details'>
-                <div className='box1'>{JSON.stringify(this.state.details)}</div>
                <div className='baseGrid'>
                 <div className='detailsCard'>
                     <div className='mainImage'>
@@ -63,7 +64,27 @@ class Details extends Component {
                             <h1>{this.state.details.title}</h1>
                             <p>{this.state.details.description}</p>
                         </div>
-                        <div className></div>
+                    </div>
+                    <div className="info">
+                        <hr/>
+                        <p>
+                           Ipsum dolor sit amet, consectetur adipisicing elit. Facilis, tionem commodi beatae a nam s amet laborum itaque nostrum. Ex ab, sint qui eius eos quidem provident aspernatur molestias minima repudiandae ducimus pariatur rerum quia.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium suscipit, alias aliquid illo nihil mollitia veritatis, voluptate dicta corrupti reprehenderit itaque esse facere. Iusto asperiores similique consectetur aut accusamus repellendus.
+                        Inventore fugiat aliquid vitae laboriosam quas natus eaque nulla, ratione ullam sed minima itaque doloribus quaerat aut commodi adipisci enim rerum. Libero, commodi soluta aspernatur velit ex obcaecati incidunt corrupti?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nostrum veniam autem, aliquam recusandae provident!
+                        </p>
+                        <p>
+                           Facilis, tionem commodi beatae a nam s amet laborum itaque nostrum. Ex ab, sint qui eius eos quidem provident aspernatur molestias minima repudiandae ducimus pariatur rerum quia.
+                        </p>
+                        <p>Accusantium suscipit, alias aliquid illo nihil mollitia veritatis, voluptate dicta corrupti reprehenderit itaque esse facere. Iusto asperiores similique consectetur aut accusamus repellendus.
+                        Inventore fugiat aliquid vitae laboriosam quas natus eaque nulla, ratione ullam sed minima itaque doloribus quaerat aut commodi adipisci enim rerum. Libero, commodi soluta aspernatur velit ex obcaecati incidunt corrupti?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nostrum veniam autem, aliquam recusandae provident!
+                        </p>
                     </div>
                 </div>
                </div>

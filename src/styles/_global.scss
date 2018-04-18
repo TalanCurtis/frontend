@@ -11,7 +11,7 @@ body {
 
 // Headers
 h1 {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
@@ -44,4 +44,12 @@ h6 {
 .baseGrid {
     display: grid;
     grid-template-columns: 40px 1fr;
+}
+
+@media (min-width:426px){
+    h1 {
+        font-size: 2em;
+        font-weight: bold;
+    }
+    
 }

@@ -2,16 +2,18 @@
     .baseGrid{
         .detailsCard{
             grid-column: 2;
+            display: grid;
+            grid-template-rows: 1fr auto;
             .mainImage{
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(2, 1fr);
+                grid-template-rows: 1fr 2fr;
                 img{
                     width: 100%;
                     grid-column: 1/3;
                     grid-row: 1/3;
                     // mask-image: linear-gradient(rgba(0, 0, 0, 1.0), transparent);
-                    mask-image: linear-gradient(45deg, transparent 3%, black 0);
+                    mask-image: linear-gradient(45deg, transparent 14px, black 0);
                     z-index: -1;
                 }
                 .imgText{
@@ -20,8 +22,29 @@
                     align-self: flex-end;
                     padding-bottom: 6%;
                     padding-left: 8%;
+                    padding-right: 10px;
+                }
+            }
+            .info{
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, transparent 15px, white 0) bottom left;
+                hr{
+                    height: 3px;
+                    border-width: 0px;
+                    width: 80%;
+                    background-color: $medPurple;
+                    margin-top: 30px;
+                }
+                p{
+                    color: $textDark;
+                    padding: 10px;
                 }
             }
         }
     }
+}
+
+@media (min-width: 426px){
+
 }
