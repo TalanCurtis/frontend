@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 import commentImg from '../../images/assets/comment.png';
 import trippleDotImg from '../../images/assets/tripple-dot.png';
 import heartImg from '../../images/assets/heart.png';
@@ -23,6 +25,7 @@ function CarouselCard(props) {
     }
     return (
         <div className='CarouselCard'>
+        <Link to={'/Details/'+props.type+'/'+props.content.id}>
             <div className='mainImage' style={{backgroundImage: `linear-gradient(45deg, grey 15px, transparent 0), url(${image})`}}>
                 <div className='likes'>
                     <img className='heartImg' src={heartImg} alt=""/>
@@ -42,6 +45,7 @@ function CarouselCard(props) {
                 </div>
                 <img className='trippleDotImg' src={trippleDotImg} alt=""/>
             </footer>
+            </Link>
         </div>
     )
 }

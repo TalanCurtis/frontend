@@ -12,7 +12,6 @@ class Carousel extends Component {
         super(props);
         this.state = {
             slideCount: 1,
-            slides: [],
             left: 0
         }
     }
@@ -51,7 +50,7 @@ class Carousel extends Component {
     render() {
         const slides = _.isEmpty(this.props.content)? null: 
         this.props.content.slides.map((x, i) => {
-                return (<CarouselCard key={i} content={x}/>)
+                return (<CarouselCard key={i} content={x} type={this.props.content.hasOwnProperty('para1')?'picture':'article'}/>)
             })
 
         return (
@@ -62,6 +61,7 @@ class Carousel extends Component {
                     <header>
                         <div className='leftCheveron' onClick={() => this.handleSlideBack()}/>
                         <div className='rightCheveron' onClick={() => this.handleSlideForeword()}/>
+                         {/* <button onClick={()=>{console.log('pic', this.props.content.hasOwnProperty('para1'))}}>Pict</button> */}
                         <h5>{this
                                 .props
                                 .content
