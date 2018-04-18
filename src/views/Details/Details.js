@@ -59,12 +59,11 @@ class Details extends Component {
                 <div className='detailsCard'>
                     <div className='mainImage'>
                         <img src={testImg} alt="" />
-                        {/* <img src={testImg} alt="" style={{backgroundImage: `linear-gradient(45deg, purple 15px, transparent 0), url(${testImg})`}}/> */}
-                        {/* <div className='image'  style={{backgroundImage: `linear-gradient(45deg, grey 15px, transparent 0), url(${testImg})`}}></div> */}
                         <div className='imgText'>
                             <h1>{this.state.details.title}</h1>
                             <p>{this.state.details.description}</p>
                         </div>
+                        <div className></div>
                     </div>
                 </div>
                </div>

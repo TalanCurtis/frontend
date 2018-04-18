@@ -11,9 +11,8 @@
                     grid-column: 1/3;
                     grid-row: 1/3;
                     // mask-image: linear-gradient(rgba(0, 0, 0, 1.0), transparent);
-                    mask-image: linear-gradient(45deg, transparent 15px, black 0);
+                    mask-image: linear-gradient(45deg, transparent 3%, black 0);
                     z-index: -1;
-
                 }
                 .imgText{
                     grid-column: 1/3;
