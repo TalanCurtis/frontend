@@ -25,8 +25,9 @@ function CarouselCard(props) {
     }
     return (
         <div className='CarouselCard'>
-        <Link to={'/Details/'+props.type+'/'+props.content.id}>
-            <div className='mainImage' style={{backgroundImage: `linear-gradient(45deg, grey 15px, transparent 0), url(${image})`}}>
+        <Link to={'/Details/'+props.type+'/'+props.content.id} style={{textDecoration:'none'}}>
+            <div className='mainImage' >
+                <img className='bgImage' src={image} alt=""/>
                 <div className='likes'>
                     <img className='heartImg' src={heartImg} alt=""/>
                     <p>382</p>
