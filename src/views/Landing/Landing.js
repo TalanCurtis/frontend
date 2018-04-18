@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import _ from 'lodash';
 
 // import components
-import SideBar from '../../components/SideBar/SideBar';
 import Intro from '../../components/Intro/Intro';
 import Carousel from '../../components/Carousel/Carousel';
 import Signature from '../../components/Signature/Signature';
@@ -41,7 +40,6 @@ class Landing extends Component {
         )})
         return (
             <div className='Landing'>
-                <SideBar navText={this.state.intro.navText}/>
                 <Intro content={this.state.intro}/>
                 <Carousel content={this.state.sliderPictures} />
                 <div className='pictureParagraphs'>

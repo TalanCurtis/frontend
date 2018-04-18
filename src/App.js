@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import './styles/main.css';
 import Landing from './views/Landing/Landing';
 import Details from './views/Details/Details';
+import SideBar from './components/SideBar/SideBar';
 import Test from './views/Tests/Fonts';
 import {Switch, Route} from 'react-router';
 
@@ -11,6 +12,7 @@ class App extends Component {
         return (
             <div className="App">
                 <div className="app-container">
+                    <SideBar />
                     <Switch>
                         <Route exact path="/" component={Landing} />
                         <Route path="/Details/:type/:id" component={Details} />

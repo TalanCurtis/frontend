@@ -1,7 +1,6 @@
 import React, {Component}from 'react';
 import _ from 'lodash';
 // import components
-import SideBar from '../../components/SideBar/SideBar';
 import Signature from '../../components/Signature/Signature';
 import Footer from '../../components/Footer/Footer';
 
@@ -42,7 +41,6 @@ class Details extends Component{
     render(){
         return(
         <div className='Details'>
-            <SideBar />
             <div className='box1'>{JSON.stringify(this.state.details)}</div>
             <Signature content={this.state.signature} />
             <Footer content={this.state.footer} />
