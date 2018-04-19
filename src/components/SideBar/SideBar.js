@@ -66,13 +66,13 @@ class SideBar extends Component {
             }}>
                 {/* hidden menu links displayed when menu roles out */}
                 <div className='menuLinks'>
-                    <Link to='/'>
+                    <Link to='/' onClick={()=>{this.handleMenuTransition()}}>
                         <h5>Home</h5>
                     </Link>
-                    <Link to='/'>
+                    <Link to='/' onClick={()=>{this.handleMenuTransition()}}>
                         <h5>About</h5>
                     </Link>
-                    <Link to='/'>
+                    <Link to='/' onClick={()=>{this.handleMenuTransition()}}>
                         <h5>Contact</h5>
                     </Link>
                 </div>
