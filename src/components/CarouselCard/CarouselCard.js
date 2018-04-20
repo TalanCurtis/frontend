@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {TweenMax} from 'gsap';
+import $ from 'jquery';
 
 import commentImg from '../../images/assets/comment.png';
 import trippleDotImg from '../../images/assets/tripple-dot.png';
@@ -23,6 +25,15 @@ function CarouselCard(props) {
         case 'image6.jpg':image = image6 ; break;
         default:console.log('image switch defaulted'); break;
     }
+
+    $(".CarouselCard").hover(over, out);
+    function over(){
+        TweenMax.to(this, .5, {scale:1.05})
+    }
+    function out(){
+        TweenMax.to(this, .5, {scale:1})
+    }
+
     return (
         <div className='CarouselCard'>
         <Link to={'/Details/'+props.type+'/'+props.content.id} style={{textDecoration:'none'}}>

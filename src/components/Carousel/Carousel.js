@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import CarouselCard from '../CarouselCard/CarouselCard';
 import _ from 'lodash';
-import {TweenMax, Power4, Bounce} from 'gsap';
+import {TweenMax, Power4} from 'gsap';
 
 // transition styles.
 const styles = {
@@ -21,6 +21,7 @@ class Carousel extends Component {
         this.animation();
     }
 
+
     animation() {
         // Animations for card intro
         TweenMax.staggerFrom('.CarouselCard', 1, {
@@ -37,7 +38,6 @@ class Carousel extends Component {
             x: -272,
             delay: .25,
             ease:Power4.easeOut,
-            zIndex: -10,
         }, .5)
     }
 
