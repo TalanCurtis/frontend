@@ -31,31 +31,36 @@
 
 @media (min-width: 426px) {
     .Footer {
-        display: flex;
-        justify-content: center;
-        .grid {
-            display: grid;
-            grid-template-columns: minmax(100px, 250px) minmax(50px, 100px) auto;
-            grid-gap: 15px;
-            padding: 10px;
-            .about {
-                grid-row: auto;
-                grid-column: auto;
+        div{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .grid {
+                display: grid;
+                grid-template-columns: minmax(100px, 250px) minmax(50px, 100px) minmax(50px, 250px);
+                align-items: flex-start;
+                grid-gap: 15px;
+                padding: 10px;
+                .about {
+                   
+                    grid-row: auto;
+                    grid-column: auto;
+                }
+                .history {
+                    grid-row: auto;
+                }
+                .contact {
+                    grid-row: auto;
+                }
+                h5 {
+                    color: $lightBlue;
+                    margin-bottom: 5px;
+                }
             }
-            .history {
-                grid-row: auto;
-            }
-            .contact {
-                grid-row: auto;
-            }
-            h5 {
+            .copyright {
+                padding: 10px;
                 color: $lightBlue;
-                margin-bottom: 5px;
             }
-        }
-        .copyright {
-            padding: 10px;
-            color: $lightBlue;
         }
     }
 }
