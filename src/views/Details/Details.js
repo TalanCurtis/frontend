@@ -21,7 +21,7 @@ class Details extends Component {
         // set window scoll position to top.
         window.scrollTo(0, 0); 
 
-        const {footer, signature, slider1, slider2} = content
+        const {slider1, slider2} = content
         let details = {}
         // Since pictures and articles had ids that overlaped I seperated them by type then used id to get the information.
         if (this.props.match.params.type === 'picture') {

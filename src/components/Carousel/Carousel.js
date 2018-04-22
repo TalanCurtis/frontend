@@ -21,7 +21,6 @@ class Carousel extends Component {
         this.animation();
     }
 
-
     animation() {
         // Animations for card intro
         TweenMax.staggerFrom('.CarouselCard', 1, {
@@ -30,7 +29,7 @@ class Carousel extends Component {
             x: 0,
             delay: .25,
             ease:Power4.easeOut,
-        }, .5)
+        }, .25)
 
         TweenMax.staggerFrom('.CarouselCard', 1, {
             scale: 1,
@@ -38,7 +37,7 @@ class Carousel extends Component {
             x: -272,
             delay: .25,
             ease:Power4.easeOut,
-        }, .5)
+        }, .25)
     }
 
     handleSlideBack() {
