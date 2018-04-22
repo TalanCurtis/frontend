@@ -9,7 +9,6 @@ function Intro(props) {
     function animation(){
         TweenMax.from('.Intro, p ', 2, {opacity:1, zIndex:-1})
         TweenMax.from('.Intro, p', 2, {opacity:0, zIndex: -1})
-        console.log('animate')
     }
     return (
         <div className='Intro'>
