@@ -40,7 +40,7 @@ class SideBar extends Component {
     }
 
     handleMenuTransition() {
-        console.log('handle menu Transition', this.state)
+        // console.log('handle menu Transition', this.state)
         if (this.state.isOpen) {
             // set these values when menu closes
             this.setState({menuPosition: -200, bgAlpha: this.state.scrollPercent})

@@ -32,18 +32,18 @@ class Details extends Component {
         // Since pictures and articles had ids that overlaped I seperated them by type
         // then id to get the information.
         if (this.props.match.params.type === 'picture') {
-            console.log('picture', this.props)
-            console.log('find', _.find(slider1.slides, (x) => {
-                return x.id === this.props.match.params.id * 1
-            }))
+            // console.log('picture', this.props)
+            // console.log('find', _.find(slider1.slides, (x) => {
+            //     return x.id === this.props.match.params.id * 1
+            // }))
             details = _.find(slider1.slides, (x) => {
                 return x.id === this.props.match.params.id * 1
             })
         } else {
-            console.log('article', this.props)
-            console.log('find', _.find(slider2.slides, (x) => {
-                return x.id === this.props.match.params.id * 1
-            }))
+            // console.log('article', this.props)
+            // console.log('find', _.find(slider2.slides, (x) => {
+            //     return x.id === this.props.match.params.id * 1
+            // }))
             details = _.find(slider2.slides, (x) => {
                 return x.id === this.props.match.params.id * 1
             })
