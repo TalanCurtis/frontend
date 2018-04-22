@@ -24,8 +24,6 @@ function Intro(props) {
                             <p>{props.content.header[0].description.name}</p>
                         </div>
                         <div className='date'>
-                            {/* TODO : change from Hard coded date because none was provided in the content. If this is the current date
-                                i would do a with moment-js*/}
                             <p>April 19th 2016</p>
                         </div>
                     </div>

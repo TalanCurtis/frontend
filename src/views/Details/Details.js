@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
-// import components
-import Signature from '../../components/Signature/Signature';
-import Footer from '../../components/Footer/Footer';
 
 //images
 import testImg from '../../images/assets/image2.jpg';
@@ -14,10 +11,8 @@ class Details extends Component {
     constructor() {
         super();
         this.state = {
-            footer: {},
             sliderPictures: {},
             sliderArticles: {},
-            signature: {},
             details: {}
         }
     }
@@ -25,31 +20,22 @@ class Details extends Component {
     componentDidMount() {
         // set window scoll position to top.
         window.scrollTo(0, 0); 
-        // Here I deconstructed content and assigned it to state using set Timeout to
-        // mimic a Ajax request to a server.
+
         const {footer, signature, slider1, slider2} = content
         let details = {}
-        // Since pictures and articles had ids that overlaped I seperated them by type
-        // then id to get the information.
+        // Since pictures and articles had ids that overlaped I seperated them by type then used id to get the information.
         if (this.props.match.params.type === 'picture') {
-            // console.log('picture', this.props)
-            // console.log('find', _.find(slider1.slides, (x) => {
-            //     return x.id === this.props.match.params.id * 1
-            // }))
             details = _.find(slider1.slides, (x) => {
                 return x.id === this.props.match.params.id * 1
             })
         } else {
-            // console.log('article', this.props)
-            // console.log('find', _.find(slider2.slides, (x) => {
-            //     return x.id === this.props.match.params.id * 1
-            // }))
             details = _.find(slider2.slides, (x) => {
                 return x.id === this.props.match.params.id * 1
             })
         }
+        
         setTimeout(() => {
-            this.setState({footer: footer, sliderPictures: slider1, sliderArticles: slider2, signature: signature, details: details})
+            this.setState({ sliderPictures: slider1, sliderArticles: slider2,details: details})
         }, 1000)
     }
 
@@ -88,8 +74,6 @@ class Details extends Component {
                     </div>
                 </div>
                </div>
-                <Signature content={this.state.signature}/>
-                <Footer content={this.state.footer}/>
             </div>
         )
     }

@@ -31,16 +31,12 @@ class SideBar extends Component {
     }
 
     handleScroll() {
-        // offsetHeight  - inner height = max scroll distance then divide it by current
-        // scrollY let scrollPercent = (window.scrollY / (document.body.offsetHeight -
-        // window.innerHeight)).toFixed(2) * 1 then subtract from 1 being 100% opaque
+        // offsetHeight - innerHeight = max scroll distance then divide it by current scroll position.
         let scrollPercent = (1 - (window.scrollY / (document.body.offsetHeight - window.innerHeight))).toFixed(2) * 1
-        // console.log('Scroll', scrollPercent)
         this.setState({scrollPercent: scrollPercent})
     }
 
     handleMenuTransition() {
-        // console.log('handle menu Transition', this.state)
         if (this.state.isOpen) {
             // set these values when menu closes
             this.setState({menuPosition: -200, bgAlpha: this.state.scrollPercent})
@@ -64,7 +60,7 @@ class SideBar extends Component {
                     ? this.state.bgAlpha
                     : this.state.scrollPercent})`
             }}>
-                {/* hidden menu links displayed when menu roles out */}
+                {/* links display when menu roles out */}
                 <div className='menuLinks'>
                     <Link to='/' onClick={()=>{this.handleMenuTransition()}}>
                         <h5>Home</h5>
@@ -77,7 +73,7 @@ class SideBar extends Component {
                     </Link>
                 </div>
 
-                {/* Tip of the menu displaying the info and menu activate button */}
+                {/* menu displaying the hamburger icon */}
                 <div className='info'>
                     <div className='menu'>
                         <img src={menu_icon} onClick={() => this.handleMenuTransition()} alt=""/>
