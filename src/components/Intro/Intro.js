@@ -7,8 +7,8 @@ import { TweenMax } from 'gsap';
 
 function Intro(props) {
     function animation(){
-        TweenMax.from('.Intro, p ', 2, {opacity:1, zIndex:-1})
-        TweenMax.from('.Intro, p', 2, {opacity:0, zIndex: -1})
+        TweenMax.from('.Intro ', 2, {opacity:1, zIndex:-1})
+        TweenMax.from('.Intro', 2, {opacity:0, zIndex: -1})
     }
     return (
         <div className='Intro'>
