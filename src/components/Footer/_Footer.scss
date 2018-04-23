@@ -1,4 +1,6 @@
 .Footer {
+    grid-column-start: 1;
+    grid-column-end: -1;
     background-color: $darkPurple;
     display: flex;
     flex-direction: column;

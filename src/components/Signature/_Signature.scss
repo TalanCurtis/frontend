@@ -1,4 +1,6 @@
 .Signature{
+    grid-column-start: 1;
+    grid-column-end: -1;
     .baseGrid{
         .bgImage {
             grid-column: 1/3;

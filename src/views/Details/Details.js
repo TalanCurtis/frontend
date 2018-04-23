@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
 import Loading from '../../components/Loading/Loading';
+import Footer from '../../components/Footer/Footer';
+import Signature from '../../components/Signature/Signature';
 
 //images
 import testImg from '../../images/assets/image2.jpg';
@@ -14,7 +16,9 @@ class Details extends Component {
         this.state = {
             sliderPictures: {},
             sliderArticles: {},
-            details: {}
+            details: {},
+            signature: {},
+            footer:{}
         }
     }
 
@@ -22,7 +26,7 @@ class Details extends Component {
         // set window scoll position to top.
         window.scrollTo(0, 0); 
 
-        const {slider1, slider2} = content
+        const {footer, signature, slider1, slider2} = content
         let details = {}
         // Since pictures and articles had ids that overlaped I seperated them by type then used id to get the information.
         if (this.props.match.params.type === 'picture') {
@@ -36,7 +40,7 @@ class Details extends Component {
         }
         
         setTimeout(() => {
-            this.setState({ sliderPictures: slider1, sliderArticles: slider2,details: details})
+            this.setState({ footer: footer, signature: signature, sliderPictures: slider1, sliderArticles: slider2,details: details})
         }, 1000)
     }
 
@@ -77,6 +81,8 @@ class Details extends Component {
                         </p>
                     </div>
                 </div>
+                <Signature content={this.state.signature} />
+                <Footer content={this.state.footer} />
                </div>
                 }
             </div>

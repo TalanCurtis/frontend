@@ -3,6 +3,8 @@ import _ from 'lodash';
 import Intro from '../../components/Intro/Intro';
 import Carousel from '../../components/Carousel/Carousel';
 import Loading from '../../components/Loading/Loading';
+import Footer from '../../components/Footer/Footer';
+import Signature from '../../components/Signature/Signature';
 
 // dummy data
 import content from '../../content.json';
@@ -14,13 +16,15 @@ class Landing extends Component {
             intro: {},
             sliderPictures: {},
             sliderArticles: {},
+            signature: {},
+            footer:{}
         }
     }
 
     componentDidMount() {
-        const {intro, slider1, slider2} = content
+        const {footer, signature, intro, slider1, slider2} = content
         setTimeout(() => {
-            this.setState({ intro: intro, sliderPictures: slider1, sliderArticles: slider2})
+            this.setState({ footer: footer, signature: signature, intro: intro, sliderPictures: slider1, sliderArticles: slider2})
         }, 1000)
     }
 
@@ -48,6 +52,8 @@ class Landing extends Component {
                     <div className='blank'></div>
                     {articalColumns}
                 </div>
+                <Signature content={this.state.signature} />
+                <Footer content={this.state.footer} />
                 </div>
                 }
             </div>
