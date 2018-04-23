@@ -48,6 +48,25 @@ h6 {
     grid-template-columns: 40px 1fr;
 }
 
+
+.loading{
+    height: 200px;
+    width: 200px;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+}
 @media (min-width:426px){
     h1 {
         font-size: 2em;

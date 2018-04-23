@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
-
-// import components
 import Intro from '../../components/Intro/Intro';
 import Carousel from '../../components/Carousel/Carousel';
+import Loading from '../../components/Loading/Loading';
 
 // dummy data
 import content from '../../content.json';
@@ -34,6 +33,10 @@ class Landing extends Component {
         )})
         return (
             <div className='Landing'>
+                {_.isEmpty(this.state.intro)?
+                    <Loading />
+                :
+                <div>
                 <Intro content={this.state.intro}/>
                 <Carousel content={this.state.sliderPictures} />
                 <div className='pictureParagraphs'>
@@ -45,6 +48,8 @@ class Landing extends Component {
                     <div className='blank'></div>
                     {articalColumns}
                 </div>
+                </div>
+                }
             </div>
         )
     }

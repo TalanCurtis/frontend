@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
+import Loading from '../../components/Loading/Loading';
 
 //images
 import testImg from '../../images/assets/image2.jpg';
@@ -42,6 +43,9 @@ class Details extends Component {
     render() {
         return (
             <div className='Details'>
+                {_.isEmpty(this.state.details)?
+                    <Loading />
+                :
                <div className='baseGrid'>
                 <div className='detailsCard'>
                     <div className='mainImage'>
@@ -74,6 +78,7 @@ class Details extends Component {
                     </div>
                 </div>
                </div>
+                }
             </div>
         )
     }
