@@ -19,9 +19,13 @@
             grid-row: 2;
             display: flex;
             justify-content: center;
-            .heartImg{
-                height: 15px;
-                width: 15px;
+            align-items: center;
+            .heartIcon {
+                width: 32px;
+                height: 32px;
+                background: url('../imgs/spriteSheet.png') top left no-repeat;
+                background-size: 128px 128px;
+                background-position-y: -96px;
                 margin-right: 5px;
             }
         }
@@ -63,11 +67,31 @@
                 width: 30px;
                 height: 30px;
             }
+            .commentIcon {
+                width: 32px;
+                height: 32px;
+                background: url('../imgs/spriteSheet.png') top left no-repeat;
+                background-size: 128px 128px;
+                background-position-y: -96px;
+                background-position-x: -32px;
+                // margin-right: 5px;
+            }
         }
-        .trippleDotImg {
-            border-left: rgba(0, 0, 0, 0.164) 2px solid;
-            width: 40px;
+
+        .trippleDotContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
             height: 40px;
+            border-left: rgba(0, 0, 0, 0.164) 2px solid;
+            .trippleDotIcon {
+                width: 32px;
+                height: 32px;
+                background: url('../imgs/spriteSheet.png') top left no-repeat;
+                background-size: 128px 128px;
+                background-position-x: -64px;
+            }
         }
     }
 }

@@ -40,7 +40,8 @@ function CarouselCard(props) {
             <div className='mainImage' >
                 <img className='bgImage' src={image} alt=""/>
                 <div className='likes'>
-                    <img className='heartImg' src={heartImg} alt=""/>
+                    {/* <img className='heartImg' src={heartImg} alt=""/> */}
+                    <div className='heartIcon'></div>
                     <p>382</p>
                 </div>
             </div>
@@ -52,10 +53,14 @@ function CarouselCard(props) {
             </div>
             <footer>
                 <div className='footerInfo'>
-                    <img className='commentImg' src={commentImg} alt=""/>
+                    {/* <img className='commentImg' src={commentImg} alt=""/> */}
+                    <div className='commentIcon'></div>
                     <p>475 Comments</p>
                 </div>
-                <img className='trippleDotImg' src={trippleDotImg} alt=""/>
+                {/* <img className='trippleDotImg' src={trippleDotImg} alt=""/> */}
+                <div className='trippleDotContainer'>
+                    <div className='trippleDotIcon'></div>
+                </div>
             </footer>
             </Link>
         </div>

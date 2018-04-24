@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import menu_icon from '../../images/assets/menu-icon.png'
 
 // transition styles for the menu to slide and fade.
 const styles = {
@@ -76,7 +75,11 @@ class SideBar extends Component {
                 {/* menu displaying the hamburger icon */}
                 <div className='info'>
                     <div className='menu'>
-                        <img src={menu_icon} onClick={() => this.handleMenuTransition()} alt=""/>
+                        {this.state.isOpen?
+                        <div className='xIcon' onClick={()=>this.handleMenuTransition()}></div>
+                        :
+                        <div className='menuIcon' onClick={()=>this.handleMenuTransition()}></div>
+                        }
                     </div>
                 </div>
             </div>

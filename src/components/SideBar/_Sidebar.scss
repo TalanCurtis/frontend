@@ -12,9 +12,25 @@
         grid-template-columns: 1fr;
         .menu{
             justify-self: center;
-            img{
-                height: 35px;
-                width: 35px;
+            .menuIcon {
+                width: 32px;
+                height: 32px;
+                background: url('../imgs/spriteSheet.png') top left no-repeat;
+                background-size: 128px 128px;
+                background-position-y: -32px;
+            }
+            .menuIcon:hover {
+                background-position-x: -32px;
+            }
+            .xIcon {
+                width: 32px;
+                height: 32px;
+                background: url('../imgs/spriteSheet.png') top left no-repeat;
+                background-size: 128px 128px;
+                background-position-y: -64px;
+            }
+            .xIcon:hover {
+                background-position-x: -32px;
             }
         }
         .title{
