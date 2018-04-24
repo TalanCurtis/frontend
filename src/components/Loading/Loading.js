@@ -1,5 +1,5 @@
 import React from 'react';
-import loadingIcon from '../../images/assets/puff.svg';
+import loadingIcon from '../../imgs/puff.svg';
 
 function Loading (){
     return(
