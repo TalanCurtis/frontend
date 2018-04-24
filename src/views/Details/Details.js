@@ -3,6 +3,7 @@ import _ from 'lodash';
 import Loading from '../../components/Loading/Loading';
 import Footer from '../../components/Footer/Footer';
 import Signature from '../../components/Signature/Signature';
+import TweenMax from 'gsap';
 
 //images
 import testImg from '../../images/assets/image2.jpg';
@@ -41,6 +42,8 @@ class Details extends Component {
         
         setTimeout(() => {
             this.setState({ footer: footer, signature: signature, sliderPictures: slider1, sliderArticles: slider2,details: details})
+            TweenMax.set('.Details',  {opacity:0})
+            TweenMax.to('.Details', 1, {opacity:1})
         }, 1000)
     }
 

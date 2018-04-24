@@ -2,20 +2,14 @@ import React from 'react';
 import testImgBG from '../../images/assets/background1.jpg';
 import testImgLogo from '../../images/assets/logo.png';
 import _ from 'lodash';
-import { TweenMax } from 'gsap';
 
 
 function Intro(props) {
-    function animation(){
-        TweenMax.from('.Intro ', 2, {opacity:1, zIndex:-1})
-        TweenMax.from('.Intro', 2, {opacity:0, zIndex: -1})
-    }
     return (
         <div className='Intro'>
             {_.isEmpty(props.content)
                 ? null
                 : <div className='baseGrid'>
-                    {animation()}
                     <img className='bgImage' src={testImgBG} alt=""/>
                     <div className='subGrid'>
                         <img className='logo' src={testImgLogo} alt=""/>

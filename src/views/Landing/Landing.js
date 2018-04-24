@@ -5,6 +5,7 @@ import Carousel from '../../components/Carousel/Carousel';
 import Loading from '../../components/Loading/Loading';
 import Footer from '../../components/Footer/Footer';
 import Signature from '../../components/Signature/Signature';
+import {TweenMax} from 'gsap';
 
 // dummy data
 import content from '../../content.json';
@@ -25,6 +26,8 @@ class Landing extends Component {
         const {footer, signature, intro, slider1, slider2} = content
         setTimeout(() => {
             this.setState({ footer: footer, signature: signature, intro: intro, sliderPictures: slider1, sliderArticles: slider2})
+            TweenMax.set('.Landing',  {opacity:0})
+            TweenMax.to('.Landing', 1, {opacity:1})
         }, 1000)
     }
 
