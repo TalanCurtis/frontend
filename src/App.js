@@ -21,8 +21,6 @@ const PageFade = (props) => (
 
 class App extends Component {
 
-
-
     render() {
         return (
             <div className="App">
@@ -32,7 +30,6 @@ class App extends Component {
                         <TransitionGroup>
                         <PageFade key={location.location.key}>
                     <Switch location={location.location} >
-                    {console.log('Location', location)}
                         <Route exact path="/" component={Landing} />
                         <Route path="/Details/:type/:id" component={Details} />
                         <Route path="/test" component={Test} />

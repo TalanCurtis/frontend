@@ -2,10 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {TweenMax} from 'gsap';
 import $ from 'jquery';
-
-import commentImg from '../../images/assets/comment.png';
-import trippleDotImg from '../../images/assets/tripple-dot.png';
-import heartImg from '../../images/assets/heart.png';
 // import images
 import image1 from '../../images/assets/image1.jpg';
 import image2 from '../../images/assets/image2.jpg';
