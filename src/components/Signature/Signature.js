@@ -1,5 +1,4 @@
 import React from 'react';
-import bgImage2 from '../../images/assets/background2.jpg'
 import _ from 'lodash';
 
 function Signature(props) {
@@ -8,7 +7,7 @@ function Signature(props) {
             {_.isEmpty(props.content)
                 ? null
                 : <div className='baseGrid'>
-                    <img className='bgImage' src={bgImage2} alt=""/>
+                    <img className='bgImage' src={'/images/'+props.content[0].backgroundImage} alt="backgroundImage"/>
                     <div className='subGrid'>
                         <div className='info'>
                             <h5>{props.content[0].subtitle}</h5>

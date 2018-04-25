@@ -5,9 +5,6 @@ import Footer from '../../components/Footer/Footer';
 import Signature from '../../components/Signature/Signature';
 import TweenMax from 'gsap';
 
-//images
-import testImg from '../../images/assets/image2.jpg';
-
 // dummy data
 import content from '../../content.json';
 
@@ -56,7 +53,7 @@ class Details extends Component {
                <div className='baseGrid'>
                 <div className='detailsCard'>
                     <div className='mainImage'>
-                        <img src={testImg} alt="" />
+                        <img src={'/images/'+this.state.details.image} alt="detailImage" />
                         <div className='imgText'>
                             <h1>{this.state.details.title}</h1>
                             <p>{this.state.details.description}</p>

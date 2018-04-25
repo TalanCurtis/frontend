@@ -2,25 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {TweenMax} from 'gsap';
 import $ from 'jquery';
-// import images
-import image1 from '../../images/assets/image1.jpg';
-import image2 from '../../images/assets/image2.jpg';
-import image3 from '../../images/assets/image3.jpg';
-import image4 from '../../images/assets/image4.jpg';
-import image5 from '../../images/assets/image5.jpg';
-import image6 from '../../images/assets/image6.jpg';
 
 function CarouselCard(props) {
-    let image=''
-    switch (props.content.image) {
-        case 'image1.jpg':image = image1 ; break;
-        case 'image2.jpg':image = image2 ; break;
-        case 'image3.jpg':image = image3 ; break;
-        case 'image4.jpg':image = image4 ; break;
-        case 'image5.jpg':image = image5 ; break;
-        case 'image6.jpg':image = image6 ; break;
-        default:console.log('image switch defaulted'); break;
-    }
 
     $(".CarouselCard").hover(over, out);
     function over(){
@@ -34,9 +17,8 @@ function CarouselCard(props) {
         <div className='CarouselCard'>
         <Link to={'/Details/'+props.type+'/'+props.content.id} style={{textDecoration:'none'}}>
             <div className='mainImage' >
-                <img className='bgImage' src={image} alt=""/>
+                <img className='bgImage' src={'/images/'+props.content.image} alt=""/>
                 <div className='likes'>
-                    {/* <img className='heartImg' src={heartImg} alt=""/> */}
                     <div className='heartIcon'></div>
                     <p>382</p>
                 </div>
@@ -49,11 +31,9 @@ function CarouselCard(props) {
             </div>
             <footer>
                 <div className='footerInfo'>
-                    {/* <img className='commentImg' src={commentImg} alt=""/> */}
                     <div className='commentIcon'></div>
                     <p>475 Comments</p>
                 </div>
-                {/* <img className='trippleDotImg' src={trippleDotImg} alt=""/> */}
                 <div className='trippleDotContainer'>
                     <div className='trippleDotIcon'></div>
                 </div>
