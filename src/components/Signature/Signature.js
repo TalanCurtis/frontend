@@ -16,8 +16,7 @@ function Signature(props) {
                         </div>
                     </div>
                 </div>
-}
-
+            }
         </div>
     )
 }

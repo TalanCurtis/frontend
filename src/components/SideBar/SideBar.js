@@ -15,9 +15,7 @@ class SideBar extends Component {
             bgAlpha: 1,
             scrollPercent: 1,
         }
-        this.handleScroll = this
-        .handleScroll
-        .bind(this)
+        this.handleScroll = this.handleScroll.bind(this)
     }
 
     componentDidMount(){
@@ -30,7 +28,7 @@ class SideBar extends Component {
     }
 
     handleScroll() {
-        // offsetHeight - innerHeight = max scroll distance then divide it by current scroll position.
+        // offsetHeight - innerHeight = max scroll distance, then divide it by current scroll position.
         let scrollPercent = (1 - (window.scrollY / (document.body.offsetHeight - window.innerHeight))).toFixed(2) * 1
         this.setState({scrollPercent: scrollPercent})
     }
@@ -40,7 +38,7 @@ class SideBar extends Component {
             // set these values when menu closes
             this.setState({menuPosition: -200, bgAlpha: this.state.scrollPercent})
         } else {
-            // set these values when menu is opens
+            // set these values when menu opens
             this.setState({menuPosition: 0, bgAlpha: 1})
         }
         this.setState({
@@ -75,17 +73,15 @@ class SideBar extends Component {
                 {/* menu displaying the hamburger icon */}
                 <div className='info'>
                     <div className='menu'>
-                        {this.state.isOpen?
-                        <div className='xIcon' onClick={()=>this.handleMenuTransition()}></div>
-                        :
-                        <div className='menuIcon' onClick={()=>this.handleMenuTransition()}></div>
+                        {this.state.isOpen
+                            ? <div className='xIcon' onClick={()=>this.handleMenuTransition()}></div>
+                            : <div className='menuIcon' onClick={()=>this.handleMenuTransition()}></div>
                         }
                     </div>
                 </div>
             </div>
         )
     }
-
 }
 
-export default SideBar
+export default SideBar;

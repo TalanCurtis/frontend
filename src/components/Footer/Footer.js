@@ -4,13 +4,8 @@ import _ from 'lodash';
 function Footer(props) {
     let content = _.isEmpty(props.content)
         ? null
-        : props
-            .content
-            .options
-            .map((x, i) => {
-                let descriptions = x
-                    .text
-                    .map((y, j) => {
+        : props.content.options.map((x, i) => {
+                let descriptions = x.text.map((y, j) => {
                         return (
                             <div key={j}>
                                 <p>{y.description}</p>
@@ -19,9 +14,7 @@ function Footer(props) {
                     })
                 return (
                     <div key={i} className={x.id}>
-                        <h5>{x
-                                .id
-                                .toUpperCase()}</h5>
+                        <h5>{x.id.toUpperCase()}</h5>
                         {descriptions}
                     </div>
                 )
@@ -42,4 +35,4 @@ function Footer(props) {
     )
 }
 
-export default Footer
+export default Footer;

@@ -43,4 +43,4 @@ function CarouselCard(props) {
     )
 }
 
-export default CarouselCard
+export default CarouselCard;

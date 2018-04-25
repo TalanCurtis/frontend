@@ -15,7 +15,7 @@
             .menuIcon {
                 width: 32px;
                 height: 32px;
-                background: url('../imgs/spriteSheet.png') top left no-repeat;
+                background: url('../images/added/spriteSheet.png') top left no-repeat;
                 background-size: 128px 128px;
                 background-position-y: -32px;
             }
@@ -25,7 +25,7 @@
             .xIcon {
                 width: 32px;
                 height: 32px;
-                background: url('../imgs/spriteSheet.png') top left no-repeat;
+                background: url('../images/added/spriteSheet.png') top left no-repeat;
                 background-size: 128px 128px;
                 background-position-y: -64px;
             }
@@ -61,5 +61,4 @@
             margin-left: 20px;
         }
     }
-
 }

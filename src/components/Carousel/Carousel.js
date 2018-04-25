@@ -3,7 +3,7 @@ import CarouselCard from '../CarouselCard/CarouselCard';
 import _ from 'lodash';
 import {TweenMax, Power4} from 'gsap';
 
-// transition styles.
+// transition styles for sliderContainer.
 const styles = {
     transition: 'left .5s ease-in-out'
 }
@@ -11,6 +11,7 @@ const styles = {
 class Carousel extends Component {
     constructor(props) {
         super(props);
+        // Keeping track of what slide is current and left is the position of the sliderContainer.
         this.state = {
             slideCount: 1,
             left: 0
@@ -43,7 +44,7 @@ class Carousel extends Component {
     handleSlideBack() {
         console.log('slideBack')
         if (this.state.slideCount <= 1) {
-            // If you are at the begginng of the slides and hit back. it gets the number of
+            // If you are at the beginning of the slides and hit back. it gets the number of
             // slides -1 then multiplies that by how far to move to take you to the last slide.
             this.setState({
                 slideCount: this.props.content.slides.length,
@@ -59,6 +60,7 @@ class Carousel extends Component {
     }
 
     handleSlideForeword() {
+        // moves left postition on sliderContainer and increments slideCount.
         if (this.state.slideCount >= this.props.content.slides.length) {
             this.setState({slideCount: 1, left: 0})
         } else {
@@ -72,21 +74,12 @@ class Carousel extends Component {
     render() {
         const slides = _.isEmpty(this.props.content)
             ? null
-            : this
-                .props
-                .content
-                .slides
-                .map((x, i) => {
-
-                    return (<CarouselCard
+            : this.props.content.slides.map((x, i) => {
+                return (<CarouselCard
                         key={i}
                         content={x}
-                        type={this
-                        .props
-                        .content
-                        .hasOwnProperty('para1')
-                        ? 'picture'
-                        : 'article'}/>)
+                        // setting type to either picture or article based on defining object property
+                        type={this.props.content.hasOwnProperty('para1') ? 'picture' : 'article'}/>)
                 })
     
         return (
@@ -97,18 +90,9 @@ class Carousel extends Component {
                         <header>
                             <div className='leftCheveron' onClick={() => this.handleSlideBack()}/>
                             <div className='rightCheveron' onClick={() => this.handleSlideForeword()}/>
-                            <h5>{this
-                                    .props
-                                    .content
-                                    .navText
-                                    .toUpperCase()}</h5>
+                            <h5>{this.props.content.navText.toUpperCase()}</h5>
                         </header>
-                        <div
-                            className='slideContainer'
-                            style={{
-                            ...styles,
-                            left: this.state.left
-                        }}>
+                        <div className='slideContainer' style={{...styles, left: this.state.left }}>
                             {slides}
                         </div>
                     </div>
@@ -118,4 +102,4 @@ class Carousel extends Component {
     }
 }
 
-export default Carousel
+export default Carousel;

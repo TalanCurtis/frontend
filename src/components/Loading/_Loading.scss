@@ -1,0 +1,21 @@
+.loadingIcon{
+    height: 200px;
+    width: 200px;
+}
+.Loading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+}
