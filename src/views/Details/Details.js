@@ -40,7 +40,7 @@ class Details extends Component {
         setTimeout(() => {
             this.setState({ footer: footer, signature: signature, sliderPictures: slider1, sliderArticles: slider2,details: details})
             TweenMax.set('.Details',  {opacity:0})
-            TweenMax.to('.Details', 1, {opacity:1})
+            TweenMax.to('.Details', .5, {opacity:1})
         }, 1000)
     }
 

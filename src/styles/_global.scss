@@ -48,7 +48,7 @@ h6 {
     grid-template-columns: 40px 1fr;
 }
 
-
+// Loading 
 .loading{
     height: 200px;
     width: 200px;
@@ -70,43 +70,42 @@ h6 {
         margin-bottom: 10%;
     }
 }
-/////////
+// Page Transitions
 .fadeTranslate-enter {
-    position: fixed;
+    position: absolute;
     grid-row: 1;
-    opacity: 0;
+    
+    transform: translate(0, 0);
   }
   
   .fadeTranslate-enter.fadeTranslate-enter-active {
-    position: fixed;
+    position: absolute;
     grid-row: 1;
       
-    opacity: 1;
-    transition: opacity 1000ms ease-in;
+    transform: translate(-100vw, 0);
+    transition:  transform 750ms ease-in-out;
   }
   
   .fadeTranslate-exit {
-    position: fixed;
+    position: absolute;
     grid-row: 1;
       
-    opacity: 1;
     transform: translate(0, 0);
   }
   
   .fadeTranslate-exit.fadeTranslate-exit-active {
-    position: fixed;
+    position: absolute;
     grid-row: 1;
       
-    opacity: 0;
     transform: translate(-100vw, 0);
-    transition: opacity 1000ms ease-in, transform 1000ms ease-in-out;
+    transition:  transform 750ms ease-in-out;
   }
   
   .fix-container {
-    position: fixed;
-    grid-row: 1;
+    position: absolute;
   }
-//////
+
+// Media query
 @media (min-width:426px){
     h1 {
         font-size: 2em;

@@ -27,7 +27,7 @@ class Landing extends Component {
         setTimeout(() => {
             this.setState({ footer: footer, signature: signature, intro: intro, sliderPictures: slider1, sliderArticles: slider2})
             TweenMax.set('.Landing',  {opacity:0})
-            TweenMax.to('.Landing', 1, {opacity:1})
+            TweenMax.to('.Landing', .5, {opacity:1})
         }, 1000)
     }
 
